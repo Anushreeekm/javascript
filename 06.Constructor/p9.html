@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Objects</h3>
+
+    <script>
+        var x = {}; //array
+        var y = []; //object
+    </script>
+    <script>
+        var user = {
+            //key:value => Property
+            name: "Raj",
+            email: "raj123@gmail.com",
+            age: 23,
+            isView: True,
+            hobbies: ["driving","riding"]
+        };
+
+        console.log('user =',user);
+
+        document.write(`<h3> name = ${user} </h3>`); // can't destructure an object = [object object]
+        document.write(`<h3> name = ${user.name} </h3>`); // object.key
+        document.write(`<h3> name = ${user['name']} </h3>`);// object['key']
+
+        var colors = ["red","green", "blue"];
+        document.write(`<h3> colors = ${colors} </h3>`);
+        console.log('colors =', colors);
+
+        document.write(`<h3> Hobbies = ${user.hobbies} </h3> `);
+        document.write(`<h3> Hobbies = ${user.hobbies[0]} </h3> `);
+
+        user.hobbies.forEach(function(x){
+            document.write(`<h1 style="color:red;"> hobbies = ${x} </h1>`);
+        });
+    </script>
+</body>
+</html>

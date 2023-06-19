@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Object Constructor </h2>
+
+    <script>
+        function User() {
+            this.name = "ABC";
+            this.age = 30;
+            this.email = "abc@gmail.com";
+            this.weight = "50kg";
+            this.sleep = function() {
+                document.write(`<h3> 6 to 8 hours </h3>`);
+            }
+            this.exercise = function() {
+                document.write( `<h3> 2 to 3 hours </h3>`);
+            }
+            this.walk = function(){
+                document.write( `<h3> 4km per day </h3>`);
+            }
+        }
+
+        var x = new User();
+
+        console.log(x);
+
+        document.write(`<h3> ${ x.name } </h3>`);
+        document.write(`<h3> ${ x.age } </h3>`);
+        document.write(`<h3> ${ x["email"] } </h3>`);
+        document.write(`<h3> ${ x.weight } </h3>`);
+        x.sleep();
+        x.exercise();
+        x.walk();
+    </script>
+</body>
+</html>

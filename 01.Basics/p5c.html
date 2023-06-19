@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grade</h1>
+
+    <form onsubmit="totalMarks(event)">
+        
+        <div>
+            <label for="score">Enter your marks</label>
+            <input type="number" name="score" id="score" required>
+        </div>
+        
+        <button type="submit">Result</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function totalMarks(event) {
+            event.preventDefault();
+
+            var marks = document.getElementById("score").value;
+        
+            if(marks >= 70 || marks <= 100){
+                document.getElementById('result').innerHTML = `<h1> Grade A </h1>`;
+            } else if(marks >= 50 || marks < 70){
+                document.getElementById('result').innerHTML = `<h1> Grade B </h1>`;
+            }else if(marks > 35 || marks < 50){
+                document.getElementById('result').innerHTML = `<h1> Grade C </h1>`;
+            }else if(marks === 35){
+                document.getElementById('result').innerHTML = `<h1> Garde D </h1>`;
+            }else {
+                document.getElementById('result').innerHTML = `<h1> Fail </h1>`;
+            }
+        }
+
+        
+    </script>
+    </body>
+    </html>
